@@ -1,9 +1,7 @@
-const COUNTRIES_API_URL = 'https://restcountries.com/v3.1/name';
+const COUNTRIES_API_URL = 'https://restcountries.com/v3.1/name/';
 
 function fetchCountries(name) {
-    return fetch (
-        fetch(`${COUNTRIES_API_URL}/${name}?fields=name,capital,population,flags,languages`)
-    ) 
+    return fetch (`${COUNTRIES_API_URL}/${name}?fields=name,capital,population,flags,languages`)
      .then
         (response => response.json())
 };
